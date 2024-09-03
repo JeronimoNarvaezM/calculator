@@ -20,15 +20,13 @@ public class main {
         String opcion= "";
         System.out.println("1.Suma, 2.Resta. 3.Multiplicar, 4.Division, 5.Limpiar Acomulado 6.Salir");
         opcion = entrada.nextLine();
-        double acomulado = 0;
         while(!opcion.equals("6"))
         if(opcion.equals("1")){
             System.out.println("Ingrese un numero");
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese otro numero");
             double numero2= entrada.nextDouble();
-            double resultado =acomulado+Operaciones.sumar(numero1,numero2);
-            acomulado = resultado;
+            double resultado =Operaciones.sumar(numero1,numero2);
             System.out.println("El resultado es:"+resultado);
             
         }
@@ -37,8 +35,7 @@ public class main {
             double numero1 = entrada.nextDouble();
             System.out.println("Ingrese otro numero");
             double numero2= entrada.nextDouble();
-            double resultado = acomulado - Operaciones.restar(numero1,numero2);
-            acomulado = resultado;
+            double resultado = Operaciones.restar(numero1,numero2);
             System.out.println("El resultado es:"+resultado);        
     }
         if(opcion.equals("3")){
@@ -57,9 +54,6 @@ public class main {
             double numero2= entrada.nextDouble();
             double resultado =Operaciones.dividir(numero1,numero2);
             System.out.println("El resultado es:"+resultado);        
-        }
-        if(opcion.equals("5")){
-            acomulado = 0;
         }
     }
    }
